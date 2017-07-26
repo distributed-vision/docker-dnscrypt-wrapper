@@ -18,7 +18,6 @@ cd /usr/local/share/dnscrypt-wrapper
 
 [ ! -f dnscrypt.cert ] && \
 	dnscrypt-wrapper \
-	--crypt-publickey-file=crypt_public.key \
 	--crypt-secretkey-file=crypt_secret.key \
 	--provider-publickey-file=public.key \
 	--provider-secretkey-file=secret.key \
@@ -26,7 +25,6 @@ cd /usr/local/share/dnscrypt-wrapper
 
 dnscrypt-wrapper  -r ${RESOLVER_ADDRESS}:${RESOLVER_PORT} \
 	-a ${LISTEN_ADDRESS}:${LISTEN_PORT} \
-	--crypt-publickey-file=crypt_public.key \
        	--crypt-secretkey-file=crypt_secret.key \
 	--provider-cert-file=dnscrypt.cert \
 	--provider-name=${PROVIDER_NAME} \

@@ -5,6 +5,7 @@ RESOLVER_PORT=${RESOLVER_PORT:-"53"}
 LISTEN_ADDRESS=${LISTEN_ADDRESS:-"0.0.0.0"}
 LISTEN_PORT=${LISTEN_PORT:-"443"}
 PROVIDER_NAME=${PROVIDER_NAME:-"2.dnscrypt-cert.yourdomain.com"}
+REST_API_ADDRESS=${REST_API_ADDRESS:-"192.168.2.110"}
 
 
 cd /usr/local/share/dnscrypt-wrapper
@@ -29,4 +30,5 @@ dnscrypt-wrapper  -r ${RESOLVER_ADDRESS}:${RESOLVER_PORT} \
        	--crypt-secretkey-file=crypt_secret.key \
 	--provider-cert-file=dnscrypt.cert \
 	--provider-name=${PROVIDER_NAME} \
+	-R ${REST_API_ADDRESS}\
 	-VV

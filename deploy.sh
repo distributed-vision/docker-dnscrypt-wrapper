@@ -1,0 +1,1 @@
+sudo  docker run --name dnsc-wr -d -p 443:443 -p 443:443/udp -v /usr/local/share/dnscrypt-wrapper:/usr/local/share/dnscrypt-wrapper -e RESOLVER_ADDRESS="8.8.8.8" -e RESOLVER_PORT="53" -e LISTEN_PORT="443" -e PROVIDER_NAME="2.dnscrypt-cert.yourdomain.com" -t dnsc_wr

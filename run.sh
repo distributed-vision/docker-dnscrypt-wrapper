@@ -1,11 +1,11 @@
 #!/bin/bash
 
-RESOLVER_ADDRESS=${RESOLVER_ADDRESS:="8.8.8.8"}
+RESOLVER_ADDRESS=${RESOLVER_ADDRESS:="unbound"}
 RESOLVER_PORT=${RESOLVER_PORT:-"53"}
 LISTEN_ADDRESS=${LISTEN_ADDRESS:-"0.0.0.0"}
 LISTEN_PORT=${LISTEN_PORT:-"443"}
 PROVIDER_NAME=${PROVIDER_NAME:-"2.dnscrypt-cert.yourdomain.com"}
-REST_API_ADDRESS=${REST_API_ADDRESS:-"http://192.168.2.110:9999"}
+REST_API_ADDRESS=${REST_API_ADDRESS:-"http://client-key-validator:9999"}
 
 
 cd /usr/local/share/dnscrypt-wrapper
